@@ -1,0 +1,197 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+
+@media only screen and (min-width: 800px) {
+    body {
+        align-items: center;
+    }
+    main {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    form {
+        align-items: center;
+    }
+    section {
+        flex: 2;
+        align-items: center;
+    }
+    aside {
+        flex: 1;
+    }
+    header img {
+        display: inline;
+    }
+}
+
+h1,h2,h3,h4 {
+    font-weight: 600;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+
+aside {
+    padding: 1em;
+    margin: 1em;
+    background-color: rgb(236, 236, 236);
+}
+
+.personal {
+    max-width: 600px;
+    margin-bottom: 2em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;    
+}
+
+label {
+    line-height: 2em;
+    margin-bottom: 1em;
+}
+input, a {
+    font-size: 1.2em;
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 10em;
+}
+
+input[type="submit"] {
+    background-color: rgb(93, 93, 255);
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-sizing: border-box;
+    text-align: center;
+    margin: 1.2em;
+}
+
+.error {
+    color: red;
+    margin-top: 1em;
+    text-align: center;
+}
+
+/* Module list */
+
+#module-list {
+    display: flex;
+    flex-direction: column;
+}
+
+module {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    padding: 0.5em;
+}
+
+module div {
+    flex: 1;
+}
+
+module .name {
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+module .start-date {
+    text-align: center;
+}
+
+module .delete-button {
+    color: red;
+    text-align: right;
+    cursor: pointer;
+}
+
+/* Crazy loading thing */
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 27px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #20df80;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 6px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 6px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 26px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 45px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(19px, 0);
+    }
+  }
+  

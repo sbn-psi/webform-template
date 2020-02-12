@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Catalina Sky Survey Notification Service</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="/scripts.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <h1>Request PDS Letter of Support</h1>
+    <h2></h2>
+    <div class="error"></div>
+    
+    <main>
+        <section>
+            <form id="primary-form" method="post" enctype="application/x-www-form-urlencoded">
+                <div class="personal">
+                    <label>Name of PI
+                        <input type="text" name="name"> </label>
+                    <label>Name of Corresponding Proposer
+                        <input type="text" name="proposer"> </label>
+                    <label>Proposer's Email
+                        <input type="text" name="email"> </label>
+                    <label>Confirm Proposer's Email
+                        <input type="text" name="email_confirm"> </label>
+                    <label>Funding Program
+                        <input type="text" name="funding_program"> </label>
+                    <label>Proposal Title
+                        <input type="text" name="proposal_title"> </label>
+                    <label>List of Data Products to be Archived
+                        <textarea name="data_product_list"></textarea> </label>
+                    <label>Estimated Size of Data Delivery
+                        <input type="text" name="size"> </label>
+                    <label>Primary PDS Node
+                        <select name="pds_node">
+                            <option value="atmospheres">Planetary Atmospheres</option>
+                            <option value="geosciences">Geosciences</option>
+                            <option value="sbn_comets">Small Bodies - Comets</option>
+                            <option value="sbn_asteroids">Small Bodies - Asteroids/Dust</option>
+                            <option value="cartography">Cartography & Imaging Sciences</option>
+                            <option value="ppi">Planetary Plasma Interactions</option>
+                            <option value="rms">Ring-Moon Systems</option>
+                            <option value="unknown">Don't Know</option>
+                        </select> </label>
+                </div>
+                
+                <input type="submit" id="submit-button" value="Submit">
+                <div id="loading" class="lds-ellipsis" style="display: none"><div></div><div></div><div></div><div></div></div>
+            </form>
+        </section>
+        <!-- <aside id="module-list">
+
+        </aside> -->
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+version: "2"
+services:
+  app:
+    container_name: letter-of-support
+    restart: always
+    build: .
+    ports:
+      - "4001:4001"
+    environment:
+      - NODE_ENV=production
