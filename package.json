@@ -1,9 +1,11 @@
 {
   "name": "letter-of-support",
   "version": "1.0.0",
-  "description": "",
+  "description": "Template web form for storing form values in database and sending email notifications.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "node index.js"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
